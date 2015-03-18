@@ -1,0 +1,21 @@
+{
+  "name": "i-pm",
+  "version": "0.0.0",
+  "description": "Implementations of the PeerMachine interface",
+  "main": "main.js",
+  "dependencies": {
+    "ws": "",
+    "y-emitter": "",
+    "u-proto": ""
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/manvalls/i-pm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manvalls/i-pm/issues"
+  },
+  "author": "Manuel Valls Fernández <manolo@vlrz.es>",
+  "license": "LGPL-3.0"
+}
