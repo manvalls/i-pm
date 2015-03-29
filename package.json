@@ -1,6 +1,6 @@
 {
   "name": "i-pm",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Implementations of the PeerMachine interface",
   "main": "main.js",
   "dependencies": {
@@ -8,7 +8,6 @@
     "y-emitter": "",
     "u-proto": ""
   },
-  
   "repository": {
     "type": "git",
     "url": "git://github.com/manvalls/i-pm.git"
