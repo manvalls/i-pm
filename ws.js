@@ -10,7 +10,7 @@ module.exports = function getPeerMachine(server,path){
   
   wss = new ws.Server({
     server: server,
-    path: path
+    path: (path || '') + '/'
   });
   
   wss[on]('connection',onConnection,emitter);
