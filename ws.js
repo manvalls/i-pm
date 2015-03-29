@@ -8,10 +8,6 @@ module.exports = function getPeerMachine(server,path){
   var emitter = new Emitter(),
       wss;
   
-  path = path || '/';
-  if(path.charAt(0) != '/') path = '/' + path;
-  if(path.charAt(path.length - 1) != '/') path += '/';
-  
   wss = new ws.Server({
     server: server,
     path: path
