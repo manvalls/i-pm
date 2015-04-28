@@ -5,6 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "ws": "",
+    "i-peer": "",
     "y-emitter": "",
     "u-proto": ""
   },
