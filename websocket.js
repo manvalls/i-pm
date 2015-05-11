@@ -8,14 +8,16 @@ module.exports = function getPeerMachine(server,opt){
       wss;
   
   if(typeof opt == 'string') opt = {path: opt};
+  
   opt = opt || {};
+  opt.path = (opt.path || '') + '/';
   
   wss = new WebSocketServer({
     httpServer: server
   });
   
   wss[on]('request',onRequest,opt.path,opt.host,opt.origin);
-  wss[on]('connection',onConnection,emitter);
+  wss[on]('connect',onConnection,emitter);
   
   return emitter.target;
 }
@@ -23,14 +25,20 @@ module.exports = function getPeerMachine(server,opt){
 function onRequest(e,c,path,host,origin){
   var req = e[0];
   
+  console.log('req',host,req.host,path,req.resource,origin,req.origin);
+  
   if(host && host != req.host) return;
   if(path && path != req.resource) return;
   
   if(origin && origin != req.origin) req.reject();
-  else req.accept(null,req.origin);
+  else{
+    console.log('accept');
+    req.accept(null,req.origin);
+  }
 }
 
 function onConnection(e,c,emitter){
+  console.log('conn');
   emitter.give('peer',from(e[0]));
 }
 
