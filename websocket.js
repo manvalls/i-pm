@@ -25,20 +25,14 @@ module.exports = function getPeerMachine(server,opt){
 function onRequest(e,c,path,host,origin){
   var req = e[0];
   
-  console.log('req',host,req.host,path,req.resource,origin,req.origin);
-  
   if(host && host != req.host) return;
   if(path && path != req.resource) return;
   
   if(origin && origin != req.origin) req.reject();
-  else{
-    console.log('accept');
-    req.accept(null,req.origin);
-  }
+  else req.accept(null,req.origin);
 }
 
 function onConnection(e,c,emitter){
-  console.log('conn');
   emitter.give('peer',from(e[0]));
 }
 
