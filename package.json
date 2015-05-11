@@ -5,6 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "ws": "",
+    "websocket": "",
     "i-peer": "",
     "y-emitter": "",
     "u-proto": ""
