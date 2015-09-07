@@ -8,7 +8,7 @@
     "websocket": "",
     "i-peer": "",
     "y-emitter": "",
-    "u-proto": ""
+    "u-proto": "^3"
   },
   "repository": {
     "type": "git",
