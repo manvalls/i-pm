@@ -1,6 +1,6 @@
 {
   "name": "i-pm",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Implementations of the PeerMachine interface",
   "main": "main.js",
   "dependencies": {
