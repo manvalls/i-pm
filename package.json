@@ -4,11 +4,11 @@
   "description": "Implementations of the PeerMachine interface",
   "main": "main.js",
   "dependencies": {
-    "ws": "",
-    "websocket": "",
-    "i-peer": "^2",
-    "y-emitter": "",
-    "u-proto": "^3"
+    "i-peer": "^2.3.2",
+    "u-proto": "^3.7.0",
+    "websocket": "^1.0.22",
+    "ws": "^0.8.0",
+    "y-emitter": "^8.0.1"
   },
   "repository": {
     "type": "git",
